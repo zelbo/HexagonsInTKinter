@@ -25,8 +25,7 @@ class HexManager:
 		print('Got object click', event.x, event.y)
 		print(event.widget.find_closest(event.x, event.y))
 		self.canvas.itemconfigure(event.widget, fill='blue')
-	
-	# _tkinter.TclError: invalid boolean operator in tag search expression
+		# _tkinter.TclError: invalid boolean operator in tag search expression
 	
 	def populate_grid(self):
 		# is the array created by list comprehension reversed as [y][x]?
