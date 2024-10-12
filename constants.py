@@ -1,4 +1,8 @@
+"""
+There actually are no constants in python, look but don't touch.
+"""
 import math
 
+SQRT3 = math.sqrt(3.0)
 
-SQRT3 = math.sqrt(3.0)  # no constants in python, look but don't touch.
+SEPARATOR = '\n----------'
