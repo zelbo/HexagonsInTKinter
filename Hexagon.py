@@ -1,3 +1,5 @@
+# --- obsolete, renamed in major update ---
+
 # Concerning singular hexagons: shapes and such
 import math
 
