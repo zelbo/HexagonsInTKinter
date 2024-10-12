@@ -1,3 +1,4 @@
+# --- obsolete, renamed in major update ---
 # Concerning multiple hexagons: arranging on screens and doing tuple math conversion between q,r,s and x,y
 from Hexagon import *
 import math
