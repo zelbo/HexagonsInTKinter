@@ -4,6 +4,10 @@ import constants
 Point = collections.namedtuple("Point", ["x", "y"])
 
 
+def clamp(value, minimum, maximum):
+	return max(minimum, min(value, maximum))
+
+
 def flatten_list(list_of_tuples):
 	"""Convert list of tuples to straight list."""
 	return [item for sublist in list_of_tuples for item in sublist]

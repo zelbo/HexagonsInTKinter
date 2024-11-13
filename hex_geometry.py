@@ -42,9 +42,10 @@ class HexGeometry:
 	def get_size(self):
 		return self._size
 	
-	def update_size(self, new_size):
+	def update_size(self, new_size):  # should this math be moved to game tile?
+		old_size = self._size
 		self._size = new_size
-		self.modifier = float(new_size) / float(self._size)
+		self.modifier = float(new_size) / float(old_size)
 		self.update_position(self.modifier)
 		self.update_shape(self.modifier)
 	

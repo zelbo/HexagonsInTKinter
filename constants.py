@@ -1,5 +1,5 @@
 """
-There actually are no constants in python, look but don't touch.
+There are no constants in python, look but don't touch.
 """
 import math
 

@@ -15,9 +15,13 @@ from gui.hex_colors import *
 from orb import *
 import constants
 from gui.context_menu import *
+import settings
+
+options = settings.options
 
 
 class GameTile:
+	global options
 	def __init__(self, canvas, position, size, color=None):
 		self.canvas = canvas
 		self.hexagon = HexGeometry(position, size)
@@ -58,8 +62,14 @@ class GameTile:
 		)
 	
 	def resize(self, new_size):
+		# TODO: -------------------------------------------------
+		# TODO: HERE IS ZOOM ISSUE! FIND CORRECT VALUES FOR ZOOM!
+		# TODO: -------------------------------------------------
 		self.hexagon.update_size(new_size)
 		self.canvas.coords(self.hex_widget, self.hexagon.get_shape())
+		print(constants.SEPARATOR)
+		print('Game Tile - Resize')
+
 		if self.connected_orb:
 			self.connected_orb.resize(self.hexagon.modifier)
 	

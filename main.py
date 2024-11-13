@@ -1,26 +1,28 @@
 from gui.main_gui import *
 from game_manager import *
 from redblob_hexagons import *
+# TODO: we broke zoom, probably when we removed the buttons. FIX IT!
+import settings
+
+options = settings.options
 
 
 class Main:
-	# TODO: clean up the lazy duplication here.
-	offset = (50, 50)
-	starting_size = 25  # do we need to maintain a copy of size here, or is starting value good enough?
-	old_size = starting_size  # don't need this anymore, let tile and geometry worry about this stuff.
-	columns = 8
-	rows = 6
-	color = ('#666', '#ccc')
+	global options
 	
 	def __init__(self):
 		self.GUI = MainGUI()
-		self.hex_manager = HexManager(self.GUI.get_canvas(), self.offset, self.starting_size, self.columns, self.rows)
+		# options.window_canvas = self.GUI.get_canvas()
+		self.hex_manager = GameManager()
 		self.GUI.connect_game_manager(self.hex_manager)
 	
 	def main_loop(self):
 		print(constants.SEPARATOR)
 		print('PI =', math.pi)
 		print('Square Root of Three =', math.sqrt(3))
+		
+		print(constants.SEPARATOR)
+		print(f'Game Settings {options}')
 		test_all()
 		
 		self.GUI.root.mainloop()
