@@ -22,7 +22,7 @@ Fredrik Lundh - effbot https://dafarry.github.io/tkinterbook/
 # Other
 
 My family, who supported me during unemployment resulting from layoffs due to Covid lockdown.  
-Lengawaits - I would not have gotten this far banging away on my broken old slow-ass laptop.  
+Alex - I would not have gotten this far banging away on my broken old slow-ass laptop.  
 
 reddit  
 stackoverflow  
